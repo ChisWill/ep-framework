@@ -6,7 +6,7 @@ return [
     'rootPath' => dirname(__DIR__),
     'vendorPath' => dirname(__DIR__) . '/vendor',
     'debug' => true,
-    'secretKey' => 'AZg9CTMiJjtQurSRespzPwXL3Y4xDI7q',
+    'secretKey' => require('secretKey.php'),
     'di' => require('di.php'),
     'route' => require('route.php'),
     'events' => require('events.php'),

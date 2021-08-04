@@ -20,7 +20,7 @@
         }
     },
     "scripts": {
-        "post-update-cmd": "./ep scan/annotation"
+        "post-update-cmd": "ep scan/annotation"
     },
     "config": {
         "sort-packages": true
