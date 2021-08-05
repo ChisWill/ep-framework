@@ -12,12 +12,5 @@ return [
         'worker_num' => 2
     ],
     'events' => [],
-    'servers' => [
-        [
-            'port' => 9502,
-            'settings' => [
-                'open_http_protocol' => true
-            ]
-        ]
-    ]
+    'servers' => []
 ];
