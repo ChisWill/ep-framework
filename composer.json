@@ -6,13 +6,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "chiswill/ep": "*",
-        "chiswill/ep-swoole": "*",
-        "yiisoft/db-mysql": "3.0.x-dev",
-        "yiisoft/db-redis": "1.0.x-dev"
+        "chiswill/ep": "dev-master"
     },
     "require-dev": {
-        "swoole/ide-helper": "^4.6"
+        "swoole/ide-helper": "^4.6",
+        "yiisoft/db-mysql": "3.0.x-dev",
+        "yiisoft/db-redis": "1.0.x-dev",
+        "yiisoft/log-target-file": "dev-master"
+    },
+    "suggest": {
+        "chiswill/ep-swoole": "Swoole extention"
     },
     "autoload": {
         "psr-4": {
@@ -20,7 +23,7 @@
         }
     },
     "scripts": {
-        "post-update-cmd": "ep scan/annotation"
+        "post-update-cmd": "ep scan"
     },
     "config": {
         "sort-packages": true
