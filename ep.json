@@ -1,6 +1,4 @@
 {
-    "bootstrap": "vendor/autoload.php",
-    "config": "config/main.php",
     "common": {
         "db": null
     },

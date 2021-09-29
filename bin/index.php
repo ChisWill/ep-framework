@@ -7,8 +7,6 @@ use Ep\Console\Application;
 
 require(dirname(__DIR__) . '/vendor/autoload.php');
 
-Ep::init(require(dirname(__DIR__) . '/config/main.php'));
-
-$exitCode = Ep::getDi()->get(Application::class)->run();
+$exitCode = Ep::init(dirname(__DIR__))->get(Application::class)->run();
 
 exit($exitCode);

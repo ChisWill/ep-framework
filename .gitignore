@@ -35,4 +35,4 @@ phpunit.phar
 
 # other
 /runtime
-/config/secretKey.php
+.env
