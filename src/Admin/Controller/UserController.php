@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Admin\Controller;
+
+use App\Common\Component\Controller;
+use Ep\Db\Query;
+
+final class UserController extends Controller
+{
+    public function info()
+    {
+        $user = Query::find()
+            ->from('admin_user')
+            ->where([
+                'username' => 'master'
+            ])
+            ->one();
+
+        return $this->success($user);
+    }
+}

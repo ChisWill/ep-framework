@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
+use App\Common\Component\DiProvider;
+
 return [
-    'debug' => true,
+    'debug' => env('DEBUG', true),
+    'env' => env('ENV', 'test'),
     'secretKey' => env('SECRET_KEY'),
-    'di' => require('di.php'),
-    'route' => require('route.php'),
-    'events' => require('events.php'),
+    'diProvider' => DiProvider::class,
     'params' => require('params.php')
 ];
