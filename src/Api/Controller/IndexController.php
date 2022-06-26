@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace App\Api\Controller;
 
-use Ep\Web\Controller;
+use Ep\Web\Trait\Renderer;
 
-final class IndexController extends Controller
+final class IndexController
 {
-    public function indexAction()
+    use Renderer;
+
+    public function index()
     {
         return $this->string('OK');
     }

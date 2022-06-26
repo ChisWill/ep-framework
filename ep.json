@@ -3,15 +3,16 @@
         "db": null
     },
     "apps": {
-        "api": {
+        "admin": {
             "generate": {
                 "db": null,
-                "model.path": "Api/Model",
-                "model.prefix": null
+                "model.path": "Admin/Model",
+                "model.prefix": "admin_"
             },
             "migrate": {
                 "db": null,
-                "path": "Api/Migration"
+                "table": "migration",
+                "path": "@root/migrations"
             }
         }
     }
