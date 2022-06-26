@@ -6,13 +6,14 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "chiswill/ep": "dev-master"
+        "php": "^8.0",
+        "chiswill/ep2": "dev-master"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.6",
         "yiisoft/db-mysql": "dev-master",
         "yiisoft/db-redis": "dev-master",
-        "yiisoft/log-target-file": "dev-master"
+        "yiisoft/log-target-file": "^1.0"
     },
     "suggest": {
         "chiswill/ep-swoole": "Swoole extention"
@@ -23,7 +24,15 @@
         }
     },
     "scripts": {
-        "post-update-cmd": "ep scan"
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "ep generate/key"
+        ],
+        "post-update-cmd": [
+            "ep scan"
+        ]
     },
     "config": {
         "sort-packages": true
