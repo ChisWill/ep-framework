@@ -8,7 +8,7 @@ use Ep\Web\Trait\Middleware;
 use Ep\Web\Trait\Renderer;
 use Psr\Http\Message\ResponseInterface;
 
-class Controller
+abstract class Controller
 {
     use Renderer, Middleware;
 

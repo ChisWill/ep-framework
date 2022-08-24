@@ -6,10 +6,11 @@ namespace App\Admin\Controller;
 
 use App\Common\Component\Controller;
 use Ep\Db\Query;
+use Psr\Http\Message\ResponseInterface;
 
 final class UserController extends Controller
 {
-    public function info()
+    public function info(): ResponseInterface
     {
         $user = Query::find()
             ->from('admin_user')
